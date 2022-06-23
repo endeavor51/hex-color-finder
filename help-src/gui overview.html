@@ -1,0 +1,81 @@
+<script>var pagename="GUI (User Interface) Overview";</script>
+<script src="header.js"></script>
+<h5>Below is a summary of the Hex Color Finder user interface.</h5>
+
+<script>
+<!--
+
+function SetInfoText(n)
+{
+	var arr = new Array(
+		"The <b>menu</b> contains commands to manipulate, edit, and set colors and options. \
+			It also contains commands for accessing the help and about features.<br><br> \
+			To see detailed information about available menu commands, <a href=menu.html target=_top>click here.</a>",
+			
+		"The <b>preset selector</b> allows you to choose which preset to work on. If there are no \
+			presets available, this list will be empty.",
+			
+		"The <b>preset toolbar</b> contains various commands for adding, renaming, and deleting presets as well as \
+			commands for creating and deleting colors. \
+			<br><br>To see detailed information about the toolbar, <a href=prestoolbar.html target=_top>click here.</a>",
+			
+		"This button, when highlighted, makes Hex Color Finder always stay on top of other windows (which are \
+			themselves not on top). This is useful when dealing with full screen applications.",
+			
+		"The two <b>gradient extremes</b> specify the two endpoints for the gradient in between. Select one of the \
+			gradient extremes to link it to the edit color (thus allowing it to be modified).",
+			
+		"The <b>gradient</b> allows you to get an intermediate color in between the two gradient extremes. This feature \
+			is helpful when a mix of two colors is required.",
+			
+		"The two <b>gradient extremes</b> specify the two endpoints for the gradient in between. Select one of the \
+			gradient extremes to link it to the edit color (thus allowing it to be modified).",
+			
+		"The <b>component modifiers</b> allow you to change the red, green, and blue color components of the current \
+			edit color. You may either drag the scrollbars or change the text control to set the component value. \
+			<br><br>The range of each component is [0,255]",
+			
+		"The <b>screen color picker</b> is a feature used in retrieving a color of a selected pixel on the screen. \
+			When the 'New Color on Screen Color Pick' option is selected (from the Options menu), using this tool will automatically \
+			create a new color in the preset, if there is one. \
+			<br><br>To use this feature, click and drag the button to a point on the screen; while dragging, the selected pixel will be in between \
+			the crosshairs below the cursor.",
+			
+		"The <b>current edit color</b> shows the color that is currently being edited.",
+		
+		"The <b>hex value</b> shows the hexadecimal value (in HTML form) of the color that is currently being edited.",
+		
+		"The <b>preset color list</b> shows a list of all the colors in the currently selected preset. Click a color to \
+			link it to the edit color (allowing it to be changed) or double click the selected color to un-link it."
+		);
+		
+	var infodiv = document.getElementById("infodiv");
+	infodiv.innerHTML = arr[n];
+}
+
+//-->
+</script>
+
+<table cellpadding=0 cellspacing=0><tr><td>
+<img src="gui.gif" usemap="#gui.gif" align="left" width="292" height="273" border="0">
+<div id="infodiv" style="width:300; border: 1px solid #808080; background-color: #FFFFEF; padding:2px;">
+Click on an item to see more information.</div>
+
+<map name="gui.gif">
+<area shape="rect" coords="2,21,279,40" href="javascript:SetInfoText(0);" alt="Menu">
+<area shape="rect" coords="2,43,113,69" href="javascript:SetInfoText(1);" alt="Preset Selector">
+<area shape="rect" coords="114,43,279,69" href="javascript:SetInfoText(2);" alt="Preset Toolbar">
+<area shape="rect" coords="2,72,37,101" href="javascript:SetInfoText(3);" alt="Always On Top Toggle">
+<area shape="rect" coords="38,72,63,101" href="javascript:SetInfoText(4);" alt="Gradient Extremes">
+<area shape="rect" coords="64,72,248,101" href="javascript:SetInfoText(5);" alt="Color Gradient">
+<area shape="rect" coords="249,72,279,101" href="javascript:SetInfoText(6);" alt="Gradient Extremes">
+<area shape="rect" coords="2,102,279,173" href="javascript:SetInfoText(7);" alt="Color Component Modifiers">
+<area shape="rect" coords="2,174,51,206" href="javascript:SetInfoText(8);" alt="Screen Color Picker">
+<area shape="rect" coords="52,174,96,206" href="javascript:SetInfoText(9);" alt="Current Edit Color">
+<area shape="rect" coords="97,174,190,206" href="javascript:SetInfoText(10);" alt="Edit Color's Hex Value">
+<area shape="rect" coords="2,207,279,260" href="javascript:SetInfoText(11);" alt="Preset Color List">
+</map>
+
+</td></tr></table>
+
+<script src="footer.js"></script>

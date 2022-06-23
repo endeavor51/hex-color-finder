@@ -1,0 +1,15 @@
+[OPTIONS]
+Auto Index=Yes
+Compatibility=1.1 or later
+Compiled file=hexcf.chm
+Contents file=Table of Contents.hhc
+Default topic=welcome.html
+Display compile progress=Yes
+Full-text search=Yes
+Index file=Index.hhk
+Language=0x409 English (United States)
+Title=Hex Color Finder Help
+
+
+[INFOTYPES]
+

@@ -1,0 +1,406 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""resource.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAIN                ICON                    "res/HexColorFinder.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAIN DIALOGEX 0, 0, 184, 135
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_CAPTION | WS_SYSMENU
+CAPTION "Hex Color Finder"
+MENU IDR_MAIN
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    COMBOBOX        IDC_PRESETS,4,3,68,49,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "",IDC_PRESET_TOOLBAR,"ToolbarWindow32",0x944,74,3,106,
+                    14
+    CONTROL         "",IDC_CHK_TOPMOST,"Button",BS_OWNERDRAW | WS_TABSTOP,4,
+                    23,18,12
+    CONTROL         "",IDC_COLOR_LEFT,"HCF_Color",0x2,25,23,14,12
+    CONTROL         "",IDC_GRADIENT,"HCF_Gradient",0x0,42,23,121,12
+    CONTROL         "",IDC_COLOR_RIGHT,"HCF_Color",0x2,166,23,14,12
+    LTEXT           "Red",IDC_STATIC,4,39,21,12,SS_CENTERIMAGE
+    SCROLLBAR       IDC_SCROLL_RED,25,39,133,12,WS_TABSTOP
+    EDITTEXT        IDC_EDIT_RED,160,39,20,12,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Green",IDC_STATIC,4,52,21,12,SS_CENTERIMAGE
+    SCROLLBAR       IDC_SCROLL_GREEN,25,52,133,12,WS_TABSTOP
+    EDITTEXT        IDC_EDIT_GREEN,160,52,20,12,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Blue",IDC_STATIC,4,66,21,12,SS_CENTERIMAGE
+    SCROLLBAR       IDC_SCROLL_BLUE,25,66,133,12,WS_TABSTOP
+    EDITTEXT        IDC_EDIT_BLUE,160,66,20,12,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "",IDC_SCREEN_PICKER,"HCF_ScreenPicker",0x0,4,85,27,15
+    CONTROL         "",IDC_COLOR_EDIT,"HCF_Color",0x2,34,85,27,15
+    EDITTEXT        IDC_HEX,64,86,42,12,ES_AUTOHSCROLL
+    LISTBOX         IDC_PRESET_COLORS,4,106,176,25,LBS_SORT | 
+                    LBS_OWNERDRAWFIXED | LBS_NOINTEGRALHEIGHT | 
+                    LBS_MULTICOLUMN | LBS_DISABLENOSCROLL | NOT WS_BORDER | 
+                    WS_HSCROLL | WS_TABSTOP
+    RTEXT           "0 color(s)",IDC_COLOR_COUNT,110,85,70,15,SS_CENTERIMAGE
+END
+
+IDD_PRESET_NAME DIALOGEX 0, 0, 230, 52
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | 
+    WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Preset Name"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "Enter a name for the preset below:",IDC_STATIC,7,7,109,
+                    8
+    EDITTEXT        IDC_EDIT_NAME,7,23,151,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,173,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,173,24,50,14
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 207, 86
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | 
+    WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Hex Color Finder"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            IDR_MAIN,IDC_STATIC,7,6,20,20
+    LTEXT           "Hex Color Finder",IDC_STATIC,35,6,163,8,SS_NOPREFIX
+    LTEXT           "Version 3.0",IDC_STATIC,35,20,163,8
+    LTEXT           "Copyright (C) 2002, NZ Software",IDC_STATIC,35,34,163,8
+    LTEXT           "Product Homepage: http://nzworks.com/hexcf",IDC_STATIC,
+                    35,48,163,8
+    DEFPUSHBUTTON   "OK",IDOK,150,65,50,14,WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAIN ACCELERATORS 
+BEGIN
+    VK_RETURN,      ID_COLOR_COPY_HEX,      VIRTKEY, NOINVERT
+    VK_DELETE,      ID_DELETE_COLOR,        VIRTKEY, NOINVERT
+    VK_DELETE,      ID_DELETE_PRESET,       VIRTKEY, CONTROL, NOINVERT
+    VK_F3,          ID_MANIPULATE_BRIGHTER, VIRTKEY, NOINVERT
+    VK_F3,          ID_MANIPULATE_DARKER,   VIRTKEY, SHIFT, NOINVERT
+    VK_F2,          ID_MANIPULATE_INVERT,   VIRTKEY, NOINVERT
+    VK_F4,          ID_MANIPULATE_LESSCONTRAST, VIRTKEY, SHIFT, NOINVERT
+    VK_F4,          ID_MANIPULATE_LESSCONTRAST, VIRTKEY, SHIFT, NOINVERT
+    VK_F4,          ID_MANIPULATE_MORECONTRAST, VIRTKEY, NOINVERT
+    "N",            ID_NEW_COLOR,           VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "N",            ID_NEW_PRESET,          VIRTKEY, CONTROL, NOINVERT
+    "L",            ID_OPTIONS_LINK_SCROLLBARS, VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_RELOAD_PRESET,       VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_SAVE_PRESET,         VIRTKEY, CONTROL, NOINVERT
+    "1",            IDC_COLOR_LEFT,         VIRTKEY, CONTROL, NOINVERT
+    "2",            IDC_COLOR_RIGHT,        VIRTKEY, CONTROL, NOINVERT
+    VK_F1,          ID_HELP_CONTENTS,       VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 180
+        VERTGUIDE, 25
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 131
+        HORZGUIDE, 85
+        HORZGUIDE, 100
+    END
+
+    IDD_PRESET_NAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 223
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 45
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 200
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 79
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_SCREEN_BUTTON       BITMAP                  "res\\scrbtn.bmp"
+IDB_TOPMOST_ON          BITMAP                  "res\\topmost_on.bmp"
+IDB_TOPMOST_OFF         BITMAP                  "res\\topmost_off.bmp"
+IDR_TB_PRESETS          BITMAP                  "res\\tbpresets.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_SCREEN_BUTTON       CURSOR                  "res\\scrbtn.cur"
+IDC_POINTER_DRAG        CURSOR                  "res\\ptrdrag.cur"
+IDC_POINTER_COPY        CURSOR                  "res\\ptrcopy.cur"
+IDC_POINTER_DELETE      CURSOR                  "res\\ptrdelete.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAIN MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New Preset...\tCtrl+N",      ID_NEW_PRESET
+        MENUITEM "&Reload Preset...\tCtrl+O",   ID_RELOAD_PRESET
+        MENUITEM "&Save Preset\tCtrl+S",        ID_SAVE_PRESET
+        MENUITEM SEPARATOR
+        MENUITEM "&Rename Preset...",           ID_RENAME_PRESET
+        MENUITEM "&Delete Preset...\tCtrl+Del", ID_DELETE_PRESET
+        MENUITEM SEPARATOR
+        MENUITEM "&New Color\tCtrl+Shift+N",    ID_NEW_COLOR
+        MENUITEM "&Delete Color\tDel",          ID_DELETE_COLOR
+        MENUITEM SEPARATOR
+        MENUITEM "&Exit",                       IDOK
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "Copy &Hex\tEnter",            ID_COLOR_COPY_HEX
+    END
+    POPUP "&Color"
+    BEGIN
+        POPUP "&Common"
+        BEGIN
+            MENUITEM "&Red",                        ID_QUICKCOLORS_COMMON_RED
+
+            MENUITEM "&Orange",                     ID_QUICKCOLORS_COMMON_ORANGE
+
+            MENUITEM "&Yellow",                     ID_QUICKCOLORS_COMMON_YELLOW
+
+            MENUITEM "&Yellow-Green",               ID_QUICKCOLORS_COMMON_YELLOWGREEN
+
+            MENUITEM "&Green",                      ID_QUICKCOLORS_COMMON_GREEN
+
+            MENUITEM "&Teal",                       ID_QUICKCOLORS_COMMON_TEAL
+
+            MENUITEM "&Blue",                       ID_QUICKCOLORS_COMMON_BLUE
+
+            MENUITEM "&Dark Blue",                  ID_QUICKCOLORS_COMMON_DARKBLUE
+
+            MENUITEM "&Magenta",                    ID_QUICKCOLORS_COMMON_MAGENTA
+
+            MENUITEM "&Purple",                     ID_QUICKCOLORS_COMMON_PURPLE
+
+            MENUITEM "&White",                      ID_QUICKCOLORS_COMMON_WHITE
+
+            MENUITEM "&Light Gray",                 ID_QUICKCOLORS_COMMON_LIGHTGRAY
+
+            MENUITEM "&Gray",                       ID_QUICKCOLORS_COMMON_GRAY
+
+            MENUITEM "&Black",                      ID_QUICKCOLORS_COMMON_BLACK
+
+        END
+        POPUP "&Manipulate"
+        BEGIN
+            MENUITEM "&Invert\tF2",                 ID_MANIPULATE_INVERT
+            MENUITEM SEPARATOR
+            MENUITEM "&Brighter\tF3",               ID_MANIPULATE_BRIGHTER
+            MENUITEM "&Darker\tShift+F3",           ID_MANIPULATE_DARKER
+            MENUITEM SEPARATOR
+            MENUITEM "&More Contrast\tF4",          ID_MANIPULATE_MORECONTRAST
+
+            MENUITEM "&Less Contrast\tShift+F4",    ID_MANIPULATE_LESSCONTRAST
+
+        END
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Link Scrollbars\tCtrl+L",    ID_OPTIONS_LINK_SCROLLBARS
+        MENUITEM "&New Color on Screen Color Pick", 
+                                                ID_OPTIONS_NEW_COLOR_SCREEN_PICK
+
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Contents\tF1",               ID_HELP_CONTENTS
+        MENUITEM "&About Hex Color Finder...",  ID_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_TB_PRESETS TOOLBAR  14, 14
+BEGIN
+    BUTTON      ID_NEW_PRESET
+    BUTTON      ID_RELOAD_PRESET
+    BUTTON      ID_SAVE_PRESET
+    SEPARATOR
+    BUTTON      ID_RENAME_PRESET
+    BUTTON      ID_DELETE_PRESET
+    SEPARATOR
+    BUTTON      ID_NEW_COLOR
+    BUTTON      ID_DELETE_COLOR
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,1,0,0
+ PRODUCTVERSION 3,1,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "NZ Software"
+            VALUE "FileDescription", "Hex Color Finder"
+            VALUE "FileVersion", "3, 1, 0, 0"
+            VALUE "InternalName", "HexCF"
+            VALUE "LegalCopyright", "Copyright (C) 2002, NZ Software"
+            VALUE "OriginalFilename", "HexCF.exe"
+            VALUE "ProductName", "Hex Color Finder"
+            VALUE "ProductVersion", "3, 1, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_TITLE           "HexColorFinder"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_RELOAD_PRESET        "Reload Preset"
+    ID_RENAME_PRESET        "Rename Preset"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEW_PRESET           "New Preset"
+    ID_DELETE_PRESET        "Delete Preset"
+    ID_SAVE_PRESET          "Save Preset"
+    ID_NEW_COLOR            "New Color"
+    ID_DELETE_COLOR         "Delete Color"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
